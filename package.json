@@ -1,0 +1,26 @@
+{
+  "name": "starter-prototype",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "eslint": "^8.23.0",
+    "sass": "^1.54.8",
+    "vite": "^3.1.0",
+    "vite-plugin-glsl": "^0.3.0"
+  },
+  "dependencies": {
+    "@tweakpane/plugin-essentials": "^0.1.5",
+    "gsap": "^3.11.1",
+    "loaders": "github:cosmicshelter/loaders",
+    "resource-loader": "github:cosmicshelter/resource-loader",
+    "stats-js": "^1.0.1",
+    "three": "^0.144.0",
+    "tweakpane": "^3.1.0"
+  }
+}

@@ -1,5 +1,4 @@
 // Vendor
-// import { WebGLRenderer, Clock, sRGBEncoding, GammaEncoding, LinearEncoding, RGBEEncoding, RGBM7Encoding, RGBM16Encoding, RGBDEncoding, BasicDepthPacking, RGBADepthPacking } from 'three';
 import gsap from 'gsap';
 import { WebGLRenderer } from 'three';
 import { GPUStatsPanel } from 'three/examples/jsm/utils/GPUStatsPanel.js';

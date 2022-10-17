@@ -4,8 +4,6 @@ specifiers:
   '@tweakpane/plugin-essentials': ^0.1.5
   eslint: ^8.23.0
   gsap: ^3.11.1
-  loaders: github:cosmicshelter/loaders
-  resource-loader: github:cosmicshelter/resource-loader
   sass: ^1.54.8
   stats-js: ^1.0.1
   three: ^0.144.0
@@ -16,8 +14,6 @@ specifiers:
 dependencies:
   '@tweakpane/plugin-essentials': 0.1.5_tweakpane@3.1.0
   gsap: 3.11.1
-  loaders: github.com/cosmicshelter/loaders/241aeb53dd3df63e0f3964b391a6b541364ea126
-  resource-loader: github.com/cosmicshelter/resource-loader/e9f7eac8fb1ab8317bda444770e1a895b5c2941a
   stats-js: 1.0.1
   three: 0.144.0
   tweakpane: 3.1.0
@@ -1187,15 +1183,3 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
-
-  github.com/cosmicshelter/loaders/241aeb53dd3df63e0f3964b391a6b541364ea126:
-    resolution: {commit: 241aeb53dd3df63e0f3964b391a6b541364ea126, repo: git+ssh://git@github.com/cosmicshelter/loaders.git, type: git}
-    name: loaders
-    version: 1.0.0
-    dev: false
-
-  github.com/cosmicshelter/resource-loader/e9f7eac8fb1ab8317bda444770e1a895b5c2941a:
-    resolution: {commit: e9f7eac8fb1ab8317bda444770e1a895b5c2941a, repo: git+ssh://git@github.com/cosmicshelter/resource-loader.git, type: git}
-    name: resource-loader
-    version: 1.0.0
-    dev: false

@@ -4,7 +4,6 @@ import * as EssentialsPlugin from '@tweakpane/plugin-essentials';
 
 // Utils
 import DragManager from 'utils/DragManager';
-import TweakpaneInputMedia from './TweakpaneInputMedia';
 
 export default class Debugger extends Pane {
     constructor() {
@@ -30,14 +29,6 @@ export default class Debugger extends Pane {
         for (let i = 0; i < this._customInstances.length; i++) {
             if (this._customInstances[i].destroy) this._customInstances[i].destroy();
         }
-    }
-
-    addInputMedia(media, options) {
-        const inputMedia = new TweakpaneInputMedia(media, options);
-
-        this._customInstances.push(inputMedia);
-
-        return inputMedia;
     }
 
     getFolder(title) {

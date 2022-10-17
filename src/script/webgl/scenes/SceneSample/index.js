@@ -1,7 +1,6 @@
 // Vendor
 import { Scene } from 'three';
 import { component } from 'webgl/vendor/bidello';
-import { ResourceManager } from 'resource-loader';
 
 // Config
 import config from './config';
@@ -21,9 +20,10 @@ export default class SceneSample extends component(Scene) {
 
         this._debugFolder = this._createDebugFolder();
         this._cameraManager = this._createCameraManager();
-        this._resourceManager = this._createResourceManager();
 
         this._setupEventListeners();
+
+        this._start();
     }
 
     /**
@@ -63,15 +63,8 @@ export default class SceneSample extends component(Scene) {
         return cameraManager;
     }
 
-    _createResourceManager() {
-        const resourceManager = new ResourceManager();
-        resourceManager.add(config.resources);
-        resourceManager.load();
-        return resourceManager;
-    }
-
     _bindAll() {
-        this._loadCompleteHandler = this._loadCompleteHandler.bind(this);
+        
     }
 
     /**
@@ -117,11 +110,11 @@ export default class SceneSample extends component(Scene) {
      * Events
      */
     _setupEventListeners() {
-        this._resourceManager.addEventListener('complete', this._loadCompleteHandler);
+        
     }
 
     _removeEventListeners() {
-        this._resourceManager.removeEventListener('complete', this._loadCompleteHandler);
+        
     }
 
     /**

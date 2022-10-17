@@ -1,7 +1,6 @@
 // Vendor
-import { BoxGeometry, Mesh, MeshBasicMaterial, Object3D } from 'three';
+import { BoxGeometry, Mesh, MeshNormalMaterial, Object3D } from 'three';
 import { component } from 'webgl/vendor/bidello';
-import ResourceLoader from 'resource-loader';
 
 export default class ComponentBox extends component(Object3D) {
     init(options = {}) {
@@ -30,9 +29,7 @@ export default class ComponentBox extends component(Object3D) {
     }
 
     _createMaterial() {
-        const material = new MeshBasicMaterial({
-            map: ResourceLoader.get('texture-debug'),
-        });
+        const material = new MeshNormalMaterial();
 
         return material;
     }
@@ -47,9 +44,9 @@ export default class ComponentBox extends component(Object3D) {
      * Update
      */
     onUpdate({ time, deltaTime, frame }) {
-        // this._mesh.rotation.x = time;
-        // this._mesh.rotation.y = time;
-        // this._mesh.rotation.z = time;
+        this._mesh.rotation.x = time;
+        this._mesh.rotation.y = time;
+        this._mesh.rotation.z = time;
     }
 
     /**

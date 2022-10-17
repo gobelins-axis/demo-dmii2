@@ -1,10 +1,3 @@
-// Vendor
-import ResourceLoader from 'resource-loader';
-
-// Loaders
-import ThreeTextureLoader from 'loaders/three-texture-loader/src/index';
-// import ThreeTextureLoader from 'loaders/three-texture-loader';
-
 // Utils
 import Debugger from 'utils/debugger';
 
@@ -17,27 +10,14 @@ import WebGLApplication from 'script/webgl';
 class Application {
     constructor() {
         // Setup
-        this._bindAll();
-
-        this._resourceLoader = this._createResourceLoader();
         this._debugger = this._createDebugger();
         this._webglApplication = this._createWebGLApplication();
-
-        this._setupEventListeners();
+        this._webglApplication.start();
     }
 
     /**
      * Private
      */
-    _createResourceLoader() {
-        ResourceLoader.registerLoader(ThreeTextureLoader, 'texture');
-
-        const resourceLoader = new ResourceLoader();
-        resourceLoader.add({ resources: config.resources, preload: true });
-        resourceLoader.preload();
-        return resourceLoader;
-    }
-
     _createDebugger() {
         const debug = new Debugger();
         return debug;
@@ -49,24 +29,6 @@ class Application {
             debugger: this._debugger,
         });
         return webglApplication;
-    }
-
-    _bindAll() {
-        this._loadCompleteHandler = this._loadCompleteHandler.bind(this);
-    }
-
-    /**
-     * Events
-     */
-    _setupEventListeners() {
-        this._resourceLoader.addEventListener('complete', this._loadCompleteHandler);
-    }
-
-    /**
-     * Handlers
-     */
-    _loadCompleteHandler() {
-        this._webglApplication.start();
     }
 }
 
